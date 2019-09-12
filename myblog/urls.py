@@ -21,5 +21,6 @@ app_name = "myblog"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index)
+    path('', views.index),
+    path('article_<int:article_id>', views.article, name="article"),
 ]

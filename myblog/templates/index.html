@@ -22,7 +22,7 @@
         </div>
         
         <div class="text_preview">
-            {{ a.text }} >>> <a href="{% url 'article_<int:id>' %}"></a>
+            {{ a.text }} >>> <a href="{% url 'article' article_id=a.id %}">link</a>
         </div>
         <br>
     {% endfor %}
