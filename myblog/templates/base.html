@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main page</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
     {% block head %}
     {% endblock %}
 </head>
 <body>
     <header>
         <nav>
-            <a href="/admin">admin</a>
+            <a href="/">Home</a>
+            <a href="/admin">Admin</a>            
         </nav>
     </header>
-    {% block body %}
-    {% endblock %}
-        
+
+    <div class="content">
+        {% block body %}
+        {% endblock %}
+    </div>   
 </body>
 </html>

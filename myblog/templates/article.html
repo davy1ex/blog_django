@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block head %}
+<title> {{ a.title }}</title>
+{% endblock %}
+
 {% block body %}
 <div class="article">
     <div class="title">
@@ -7,7 +11,7 @@
     </div>
 
     <div class="photo">
-        {{ a.photo }}
+        <img src="{{ a.photo }}" alt="">
     </div>
 
     <div class="text">
