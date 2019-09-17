@@ -7,15 +7,30 @@
 {% block body %}
 <div class="article">
     <div class="title">
-        {{ a.title }}
+        {{ article.title }}
     </div>
 
     <div class="photo">
-        <img src="{{ a.photo }}" alt="">
+        <img src="{{ article.photo }}" alt="">
     </div>
 
     <div class="text">
-        {{ a.text }}
+        {{ article.text }}
+    </div>
+
+    <div class="comments">
+        <br>
+        <br>
+        {% for comment in comments %}
+            <div class="author">
+                {{ comment.author }}
+            </div>
+            
+            <div class="body">
+                {{ comment.body }}
+            </div>
+            <br>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

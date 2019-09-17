@@ -8,4 +8,5 @@ def index(request):
 
 def article(request, article_id):
     article = Article.objects.get(id=article_id)
-    return render(request, "article.html", {"a": article})
+    comments = article.comment_set.all()
+    return render(request, "article.html", {"article": article, "comments":comments})
