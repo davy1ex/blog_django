@@ -21,6 +21,12 @@
     <div class="comments">
         <br>
         <br>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <textarea name="text_comment">
+            </textarea>
+            <button>send</button>
+        </form>
         {% for comment in comments %}
             <div class="author">
                 {{ comment.author }}

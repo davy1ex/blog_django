@@ -11,7 +11,9 @@ def login(request):
         user = authenticate(username=data.get("username") , password=data.get("password"))
         
         if user is not None:
-            return HttpResponse("Hello", + user.username)
+            request.session["user_id"] = user.id
+            #request.session.user = user
+            #return HttpResponse(request.session.user.username + " " + str(user.id))
 
     
     form = UserForm()
